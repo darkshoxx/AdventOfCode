@@ -13,3 +13,10 @@ accumulator = 0
 for first, second in zip(first_list, second_list):
     accumulator += abs(first-second)
 print(accumulator)
+## part 2
+similarity = 0
+for left_item in first_list:
+    for right_item in second_list:
+        if left_item == right_item:
+            similarity += left_item
+print(similarity)
