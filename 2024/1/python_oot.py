@@ -109,8 +109,6 @@ class Solver:
             print(f"The result is {self.accumulator}")
         
         
-
-
 class AOCIntList(list):
     
     def __init__(self):
