@@ -4,7 +4,7 @@ declare -a lines=()
 while read p; do
     lines+=("$p")
     # echo $p
-done < C:\\Code\\GithubRepos\\AdventOfCode\\2024\\6\\input_small.txt
+done < C:\\Code\\GithubRepos\\AdventOfCode\\2024\\6\\input.txt
 line_1_string=${lines[1]}
 width=${#line_1_string}
 height=${#lines}
@@ -100,21 +100,14 @@ do
             echo "ELSE"
             pos_x=$new_pos_x
             pos_y=$new_pos_y
-            declare -a current_positions=()
-            current_positions+=($pos_x)
-            current_positions+=($pos_y)
-            test_string="${current_positions[*]},"
-            test_string="${new_pos%,}"
-            for item in "${unique_positions[@]}"
-            do
-                if [[ "$item" == "$test_string" ]]
-                then
-                    unique_positions+=("$test_string")
-                fi
-            done
+            declare -a current_positions=("R" "$new_pos_x" "$new_pos_y")
+            test_string="${current_positions[*]}"
+            if [[ ! " ${unique_positions[*]} " =~ " $test_string " ]]; then
+                unique_positions+=("$test_string")
+            fi
         fi
     fi
 
 done
 echo "RESULT:"
-echo ${#unique_positions}
+echo ${#unique_positions[@]}
