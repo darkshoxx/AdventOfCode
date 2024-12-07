@@ -1,0 +1,15 @@
+C:\Code\GithubRepos\AdventOfCode\2024\7\bin\Debug\net9.0\7.exe
+C:\Code\GithubRepos\AdventOfCode\2024\7\bin\Debug\net9.0\7.deps.json
+C:\Code\GithubRepos\AdventOfCode\2024\7\bin\Debug\net9.0\7.runtimeconfig.json
+C:\Code\GithubRepos\AdventOfCode\2024\7\bin\Debug\net9.0\7.dll
+C:\Code\GithubRepos\AdventOfCode\2024\7\bin\Debug\net9.0\7.pdb
+C:\Code\GithubRepos\AdventOfCode\2024\7\obj\Debug\net9.0\7.GeneratedMSBuildEditorConfig.editorconfig
+C:\Code\GithubRepos\AdventOfCode\2024\7\obj\Debug\net9.0\7.AssemblyInfoInputs.cache
+C:\Code\GithubRepos\AdventOfCode\2024\7\obj\Debug\net9.0\7.AssemblyInfo.cs
+C:\Code\GithubRepos\AdventOfCode\2024\7\obj\Debug\net9.0\7.csproj.CoreCompileInputs.cache
+C:\Code\GithubRepos\AdventOfCode\2024\7\obj\Debug\net9.0\7.sourcelink.json
+C:\Code\GithubRepos\AdventOfCode\2024\7\obj\Debug\net9.0\7.dll
+C:\Code\GithubRepos\AdventOfCode\2024\7\obj\Debug\net9.0\refint\7.dll
+C:\Code\GithubRepos\AdventOfCode\2024\7\obj\Debug\net9.0\7.pdb
+C:\Code\GithubRepos\AdventOfCode\2024\7\obj\Debug\net9.0\7.genruntimeconfig.cache
+C:\Code\GithubRepos\AdventOfCode\2024\7\obj\Debug\net9.0\ref\7.dll
