@@ -27,13 +27,16 @@ Day 6:
 Bash
 Python Hack
 
+Day 7:
+Python Hack
+C#
+
 Future Candidates:
 
 Go
 Zig
 Rust
 C++
-C#
 TeX
 Haskell
 SQL

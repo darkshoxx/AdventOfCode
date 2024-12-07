@@ -15,11 +15,19 @@ foreach (string line in inputData){
         long miniAccumulator = components[0];
         for( int runningIndex = 0; runningIndex < numOfOperators; runningIndex++ ){
             int currentFlag = binNumber >>> runningIndex&1;
-            if (currentFlag == 0){
-                miniAccumulator = miniAccumulator + components[runningIndex+1];
-            } else {
-                miniAccumulator = miniAccumulator * components[runningIndex+1];
-            }
+            // based switch statement solution
+            miniAccumulator = currentFlag switch{
+                0 => miniAccumulator + components[runningIndex+1],
+                _ => miniAccumulator * components[runningIndex+1]
+            };
+            // cooler ternary-onliner chad-code
+            // miniAccumulator = currentFlag == 0 ? miniAccumulator + components[runningIndex+1]: miniAccumulator*components[runningIndex+1] ;
+            // uncool if-else statement
+            // if (currentFlag == 0){
+            //     miniAccumulator = miniAccumulator + components[runningIndex+1];
+            // } else {
+            //     miniAccumulator = miniAccumulator * components[runningIndex+1];
+            // }
 
 
         }
