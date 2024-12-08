@@ -15,7 +15,7 @@ foreach (string line in inputData){
         long miniAccumulator = components[0];
         for( int runningIndex = 0; runningIndex < numOfOperators; runningIndex++ ){
             int currentFlag = binNumber >>> runningIndex&1;
-            // based switch statement solution
+            // based switch expression solution
             miniAccumulator = currentFlag switch{
                 0 => miniAccumulator + components[runningIndex+1],
                 _ => miniAccumulator * components[runningIndex+1]
