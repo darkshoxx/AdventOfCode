@@ -31,12 +31,25 @@ Day 7:
 Python Hack
 C#
 
+Day 8:
+Python Hack
+Go
+
+Day 9: 
+Python Hack
+Rust (Failure)
+
+Day 10:
+Python Hack
+C++
+
 Future Candidates:
 
-Go
+AHK
+Unity (kinda ruled out from C#)
+GDscript (Godot)
+Lua
 Zig
-Rust
-C++
 TeX
 Haskell
 SQL
