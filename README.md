@@ -43,12 +43,18 @@ Day 10:
 Python Hack
 C++
 
+Day 11:
+Python Hack
+Lua
+
+Day 12:
+Python Hack
+Godot
+
 Future Candidates:
 
 AHK
 Unity (kinda ruled out from C#)
-GDscript (Godot)
-Lua
 Zig
 TeX
 Haskell

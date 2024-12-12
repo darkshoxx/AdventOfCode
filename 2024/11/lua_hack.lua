@@ -49,8 +49,6 @@ for str in string.gmatch(my_string, "([^"..sep.."]+)") do
     table.insert(t, tonumber(str))
 end
 
-
-
 local accumulator = 0
 for index=1,8 do
     print(t[index])
