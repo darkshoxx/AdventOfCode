@@ -81,6 +81,8 @@ for row in range(height):
                 belonging_region[region] = region_value
 
 
+
+
 plants_area = {}
 plants_perimeter= {}
 
@@ -107,12 +109,13 @@ for row in range(height):
             if entry != east_neighbour:
                 add_to_dict(entry, plants_perimeter)
                 add_to_dict(east_neighbour, plants_perimeter)
-print(plants_area)
+# print(plants_area)
 # print(plants_perimeter)
-# accumulator = 0
-# for plant in plants_area.keys():
-#     accumulator += plants_perimeter[plant] * plants_area[plant]
-# print(accumulator)
+accumulator = 0
+for plant in plants_area.keys():
+    # print([plant[0], plant[1]], plants_perimeter[plant]* plants_area[plant])
+    accumulator += plants_perimeter[plant] * plants_area[plant]
+print(accumulator)
 
 ## Part 2
 
@@ -321,14 +324,14 @@ for column in [0, width - 1]:
                         continue_south = False
                 else:
                     continue_south = False
-print(len(edges_dict[(0,0)].keys()))
-print(plants_area)
-print("EDGES")
+# print(len(edges_dict[(0,0)].keys()))
+# print(plants_area)
+# print("EDGES")
 accumulator = 0
 for region, regional_edges in edges_dict.items():
     # print(regional_edges)
-    print(region)
-    print(set(regional_edges.values()))
-    print(plants_area[region])
+    # print(region)
+    # print(set(regional_edges.values()))
+    # print(plants_area[region])
     accumulator += plants_area[region]* len(set(regional_edges.values()))
 print(accumulator)
