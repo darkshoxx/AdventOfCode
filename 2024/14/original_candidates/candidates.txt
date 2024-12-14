@@ -1,0 +1,11 @@
+797
+52.0969378757515
+(average distance of 1000 s)
+
+179
+177
+max distance over 1000 s
+
+76
+184
+max distance over 100 s
