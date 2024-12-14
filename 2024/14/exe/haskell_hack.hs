@@ -8,16 +8,14 @@ main = do
     s <- readFile "input.txt"
     let inputLines = T.lines $ T.pack s
     let myIndices = map doRegexWith inputLines
-    let quadrants = []
-    let zeroesList = filter (== 0) myIndices
-    let zeroesListLength = length zeroesList
-    let onesList = filter (== 1) myIndices
-    let onesListLength = length onesList
-    let twosList = filter (== 2) myIndices
-    let twosListLength = length twosList
-    let threesList = filter (== 3) myIndices
-    let threesListLength = length threesList
-    print (((zeroesListLength*onesListLength)*twosListLength)*threesListLength)
+    let quadrants = [0,1,2,3]
+    let myFilter p = (== p)
+    let myListConstructor r = filter (myFilter r) myIndices
+    let myfunc q = length (myListConstructor q)
+    let toTakeProduct = map myfunc quadrants
+    let number = product toTakeProduct
+    -- let number = product(map (\q -> length (filter (== q) myIndices)) quadrants)
+    print number
 
 
 doRegexWith :: T.Text -> Int
