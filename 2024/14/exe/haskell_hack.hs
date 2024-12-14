@@ -27,8 +27,6 @@ doRegexWith input =
         
         myIndex = indexToIncrement [xPos, yPos]
     in myIndex
-    -- forM_ outputs printMyLine
-    -- printMyLine "NEXT"
 
 
 indexToIncrement :: [Int] -> Int
@@ -42,17 +40,8 @@ indexToIncrement positions
 
 calculateXPos :: [String] -> [Int]
 calculateXPos positionsList =
-    let xPosString = positionsList!!0
-        yPosString = positionsList!!1
-        xVelString = positionsList!!2
-        yVelString = positionsList!!3
-        xPos = read xPosString
-        yPos = read yPosString 
-        xVel = read xVelString
-        yVel = read yVelString
+    let [xPos,yPos,xVel,yVel] = map read positionsList
+        xIndices = [0,2]
         xPosNew = mod (xPos + 100*xVel) 101
         yPosNew = mod (yPos + 100*yVel) 103
     in [xPosNew, yPosNew]
-
-printMyLine :: String -> IO ()
-printMyLine str = putStrLn str
