@@ -55,13 +55,20 @@ Day 13:
 Python Hack  
 MATLAB  
 
+Day 14:  
+Python Hack  
+Haskell  
+
+Day 15:  
+Python Hack  
+PHP  
+
 Future Candidates:  
   
 AHK  
 Unity (kinda ruled out from C#)  
 Zig  
-TeX  
-Haskell  
+TeX   
 SQL  
 Docker  
 
