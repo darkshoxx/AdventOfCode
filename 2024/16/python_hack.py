@@ -95,14 +95,55 @@ def go_to_next_node(init_x, init_y, cardinal):
                 score += 1001
             current_cardinal = possible[0][1]
             cur_x, cur_y = possible[0][0]
+        elif possible == []:
+            # E/S reached
+            final_direction = directions[current_cardinal]
+            next_x, next_y = (cur_x + final_direction[0], cur_y + final_direction[1])
+            if not (next_x, next_y) in [(end_x, end_y), (start_x, start_y)]:
+                raise Exception("YOU NO GO HERE!!!")
+            score += 1
+            return next_x, next_y, current_cardinal, score
         else:
             next_node_found = True
-    return score, cur_x, cur_y, current_cardinal
+    return cur_x, cur_y, current_cardinal, score
 
 print(start_x, start_y)
 print(go_to_next_node(start_x, start_y, "E"))
 
+# dict
+# key: node_coordinates
+# value: dict
+#        key: direction
+#        value: cheapest observed cost of direction
+node_costs:dict[tuple[int,int],dict[str,int]] = {}
 
+def explore(pos_x, pos_y, cardinal, score):
+    node_x, node_y, node_card, node_score = go_to_next_node(pos_x, pos_y, cardinal)
+    if (node_x, node_y) not in node_costs.keys():
+        node_costs[(node_x, node_y)] = {}
+    possible = available_directions(node_x, node_y, node_card)
+    for possibility in possible:
+        _, next_card = possibility
+        potential_score = score + node_score
+        if next_card != node_card:
+            potential_score += 1000
+        if next_card in node_costs[(node_x, node_y)].keys():
+            if potential_score < node_costs[(node_x, node_y)][next_card]:
+                node_costs[(node_x, node_y)][next_card] = potential_score
+                explore(node_x, node_y, next_card, potential_score)
+        else: 
+            node_costs[(node_x, node_y)][next_card] = potential_score
+            explore(node_x, node_y, next_card, potential_score)
+# unexplored nodes have infinite cost
+# spawn at branch of a node, if path is cheaper
+# save cheapest way to move on from node
+# if our path is more expesive than all the options: die
 # continue_exploring = True
 # while continue_exploring:
 #     pass
+
+# explore(start_x, start_y, "E", 0)
+explore(start_x, start_y, "N", 1000)
+
+print(min(node_costs[(end_x, end_y)].values())-1000)
+# {'S': 85444, 'W': 84444}
