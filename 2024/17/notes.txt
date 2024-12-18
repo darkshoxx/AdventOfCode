@@ -1,0 +1,32 @@
+2,4,1,2,7,5,4,5,0,3,1,7,5,5,3,0
+2,4     b <- a%8
+1,2     b <- b^2 [flip second lowest bit]
+7,5     c <- fl(a/(2**b))
+4,5     b <- c^b
+0,3     a <- fl(a/8) [rightshift away lowest 3 bits]
+1,7     b <- b^7 [flip 3 lowest bits]
+5,5     out <- b%8
+3,0     loop if a != 0
+
+0b1 000 000 000 000 000 000
+
+a = .qwertyu asdfghjk
+b = 00000000 00000hjk
+c = ........ ..asdfgh
+b = ........ ..asdiop
+b = ........ ..asdIOP
+out: IOP
+extreme1:
+a = .qwertyu asdfg111
+b = 00000000 00000111
+c = ........ qwertyua
+b = ........ qwertYUA
+b = ........ qwertyua
+out yua
+extreme2:
+a = .qwertyu asdfg000
+b = 00000000 00000000
+c = .qwertyu asdfg000
+b = .qwertyu asdfg000
+b = .qwertyu asdfg111
+out: 111
