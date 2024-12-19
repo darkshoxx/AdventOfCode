@@ -62,10 +62,25 @@ Haskell
 Day 15:  
 Python Hack  
 PHP  
+  
+Day 16:  
+Python Hack  
+Pascal (unfinished)  
+  
+Day 17:  
+Python Hack (unfinished)  
+
+Day 18:  
+Python Hack  
+Julia  
+
+Day 19:  
+Python Hack  
+AHK  
+
 
 Future Candidates:  
-  
-AHK  
+
 Unity (kinda ruled out from C#)  
 Zig  
 TeX   
