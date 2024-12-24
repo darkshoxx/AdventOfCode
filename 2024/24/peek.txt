@@ -1,0 +1,14 @@
+# for digits 1 through 44
+xxx XOR yyy -> dsm
+cin XOR dsm -> zzz
+xxx AND yyy -> csm
+dsm AND cin -> cxr
+csm OR cxr  -> cot
+
+
+
+swaps:
+z05, jst
+mdm, gdf
+z15, dnt
+z30, gwc

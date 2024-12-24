@@ -1,0 +1,377 @@
+# for digit 0
+x00 XOR y00 -> z00
+x00 AND y00 -> cot
+
+# in input:
+cot = rpj
+
+# for digits 1 through 44
+xxx XOR yyy -> dsm
+cin XOR dsm -> zzz
+xxx AND yyy -> csm
+dsm AND cin -> cxr
+csm OR cxr  -> cot
+
+# in input digit 1
+cin = rpj
+dsm = nsc
+csm = bkg
+cxr = gpt
+cot = gsh
+
+# in input digit 2
+cin = gsh
+dsm = mdw
+csm = vgh
+cxr = vbm
+cot = whn
+ZOUT +
+
+# in input digit 3
+cin = whn
+dsm = vmd
+csm = vvj
+cxr = mkv
+cot = tkj
+ZOUT +
+
+
+# in input digit 4
+cin = tkj
+dsm = bjc
+csm = kff
+cxr = rkg
+cot = ggh
+ZOUT +
+
+# in input digit 5
+cin = ggh
+dsm = tvp
+csm = sgt
+cxr = bhb
+cot = z05 ERROR, line 222
+ZOUT ERROR, line 169
+
+# in input digit 6
+cin = jst
+dsm = vjh
+csm = fsb
+cxr = vvg
+cot = shw
+ZOUT +
+
+# in input digit 7
+cin = shw
+dsm = wht
+csm = qrm
+cxr = hpv
+cot = vbk
+ZOUT +
+
+# in input digit 8
+cin = vbk
+dsm = mnn
+csm = njd
+cxr = njs
+cot = cgq
+ZOUT +
+
+# in input digit 9
+cin = cgq
+dsm = mnk
+csm = hrq
+cxr = mcc
+cot = tdw
+ZOUT +
+
+# in input digit 10
+cin = tdw
+dsm = gdf ERROR, swap mcm-gdf
+csm = mcm
+cxr = pqq
+cot = gvj
+ZOUT +
+
+# in input digit 11
+cin = gvj
+dsm = jsd
+csm = dnh
+cxr = gpd
+cot = gmj
+ZOUT +
+
+# in input digit 12
+cin = gmj
+dsm = gvm
+csm = htp
+cxr = kbd
+cot = jjk
+ZOUT +
+
+# in input digit 13
+cin = jjk
+dsm = vht
+csm = gns
+cxr = djh
+cot = kkk
+ZOUT +
+
+# in input digit 14
+cin = kkk
+dsm = jhf
+csm = hdb
+cxr = rkf
+cot = vhr
+ZOUT +
+
+# in input digit 15
+cin = vhr
+dsm = dvj
+csm = z15 ERROR dnt see line 120
+cxr = ckf
+cot = jpj
+ZOUT ERROR dnt see line 261
+
+# in input digit 16
+cin = jpj
+dsm = scq
+csm = tjw
+cxr = swj
+cot = hrk
+ZOUT +
+
+# in input digit 17
+cin = hrk
+dsm = dkm
+csm = ppv
+cxr = tmf
+cot = rsq
+ZOUT +
+
+# in input digit 18
+cin = rsq
+dsm = bjf
+csm = dwt
+cxr = kjp
+cot = wrb
+ZOUT +
+
+# in input digit 19
+cin = wrb
+dsm = gbp
+csm = gth
+cxr = dwb
+cot = scp
+ZOUT +
+
+# in input digit 20
+cin = scp
+dsm = rgb
+csm = hbf
+cxr = vrb
+cot = kgv
+ZOUT +
+
+# in input digit 21
+cin = kgv
+dsm = nbf
+csm = ffj
+cxr = jng
+cot = wff
+ZOUT +
+
+# in input digit 22
+cin = wff
+dsm = kqm
+csm = bkn
+cxr = vgf
+cot = ggg
+ZOUT +
+
+# in input digit 23
+cin = ggg
+dsm = gjq
+csm = ctb
+cxr = tqq
+cot = qsv
+ZOUT +
+
+# in input digit 24
+cin = qsv
+dsm = twn
+csm = wck
+cxr = qwh
+cot = qtj
+ZOUT +
+
+# in input digit 25
+cin = qtj
+dsm = bwq
+csm = djr
+cxr = rvt
+cot = fdw
+ZOUT +
+
+# in input digit 26
+cin = fdw
+dsm = rrk
+csm = pvv
+cxr = ptc
+cot = mjd
+ZOUT +
+
+# in input digit 27
+cin = mjd
+dsm = dft
+csm = mjw
+cxr = vhs
+cot = hdf
+ZOUT +
+
+# in input digit 28
+cin = hdf
+dsm = kmr
+csm = mtc
+cxr = dwd
+cot = fhn
+ZOUT +
+
+# in input digit 29
+cin = fhn
+dsm = fkb
+csm = cfp
+cxr = nqs
+cot = kgr
+ZOUT +
+
+# in input digit 30
+cin = kgr
+dsm = vrg
+csm = fhg
+cxr = z30 ERROR line 100
+cot = 
+ZOUT ERROR gwc, line 251
+
+# in input digit 31
+cin = 
+dsm = tjp
+csm = vbc
+cxr = 
+cot = 
+ZOUT 
+
+# in input digit 32
+cin = 
+dsm = shq
+csm = gdg
+cxr = 
+cot = 
+ZOUT 
+
+# in input digit 33
+cin = 
+dsm = vqn
+csm = vmf
+cxr = 
+cot = 
+ZOUT 
+
+# in input digit 34
+cin = 
+dsm = tvj
+csm = hrg
+cxr = 
+cot = 
+ZOUT 
+
+# in input digit 35
+cin = 
+dsm = kps
+csm = fqm
+cxr = 
+cot = 
+ZOUT 
+
+# in input digit 36
+cin = 
+dsm = hwf
+csm = gdr
+cxr = 
+cot = 
+ZOUT 
+
+# in input digit 37
+cin = 
+dsm = gbn
+csm = fdg
+cxr = 
+cot = 
+ZOUT 
+
+# in input digit 38
+cin = 
+dsm = wvj
+csm = cpg
+cxr = 
+cot = 
+ZOUT 
+
+# in input digit 39
+cin = 
+dsm = ksv
+csm = dqk
+cxr = 
+cot = 
+ZOUT 
+
+# in input digit 40
+cin = 
+dsm = nmh
+csm = fqs
+cxr = 
+cot = 
+ZOUT 
+
+# in input digit 41
+cin = 
+dsm = rqn
+csm = pfn
+cxr = 
+cot = 
+ZOUT 
+
+# in input digit 42
+cin = 
+dsm = fgd
+csm = tcm
+cxr = 
+cot = 
+ZOUT 
+
+# in input digit 43
+cin = 
+dsm = cdw
+csm = csh
+cxr = 
+cot = 
+ZOUT 
+
+# in input digit 44
+cin = 
+dsm = vrw
+csm = nng
+cxr = 
+cot = 
+ZOUT 
+
+final output:
+
+TEMPLATE
+
+# in input digit 
+cin =  
+dsm = 
+csm = 
+cxr = 
+cot = 
+ZOUT 
