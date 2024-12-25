@@ -9,6 +9,8 @@ csm OR cxr  -> cot
 
 swaps:
 z05, jst
-mdm, gdf
+mcm, gdf
 z15, dnt
 z30, gwc
+sorted=
+dnt,gdf,gwc,jst,mcm,z05,z15,z30
