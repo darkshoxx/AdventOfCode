@@ -69,28 +69,43 @@ for item in ranges:
     first, last = item.split("-")
     tuples.append((first, last))
 
-from functools import cache
+
 
 
 # Either count them, or calculate them
 import math
 # count
 accumulator = 0
+
+def conglomerator(first, last, check):
+    found = []
+    digits = len(first)
+    for i in range(1, math.floor(digits/2) + 1): # a 1 every ith place
+        if digits % i == 0:
+            quotient = int(digits/i) # number of repititions
+            cell =  "0"*(i-1) + "1"
+            pattern = cell * quotient
+            low = first[:i]
+            high = last[:i]
+            for walker in range(int(low), int(high)+1):
+                if check(walker*int(pattern)):
+                    if walker*int(pattern) not in found:
+                        found.append(walker*int(pattern))
+
+    return sum(found)
+
 for first, last in tuples:
     lower = int(first)
     upper = int(last)
-    walker = int(first)
-    limit = int(last)
-    @cache
     def check(candidate):
         return lower <= candidate <= upper
-    while walker <= limit:
-        digits = len(str(walker))
-        for i in range(1, math.floor(digits/2) + 1):
-            if digits % i == 0:
-                ratio = int(digits/i)
-                candidate = int(str(walker)[:i]*ratio)
-                if check(candidate):
-                    accumulator += candidate
-        walker +=1
+    # generate all pattern numbers of the type 11111 10101010 100100100 etc
+    if len(first)==len(last):
+        local_sum_1 = conglomerator(first, last, check)
+        accumulator += local_sum_1
+    else:
+        digits = len(first)
+        local_sum_2 = conglomerator(first, digits*"9", check)
+        local_sum_3 = conglomerator("1" + digits*"0", last, check)
+        accumulator += local_sum_2 + local_sum_3
 print(accumulator)
