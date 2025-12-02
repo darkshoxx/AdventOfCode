@@ -4,7 +4,7 @@ INPUT = os.path.join(HERE, "input.txt")
 INPUTDG = os.path.join(HERE, "inputdg.txt")
 INPUTTEST = os.path.join(HERE, "test.txt")
 
-with open(INPUTDG, "r") as f:
+with open(INPUT, "r") as f:
     content = f.readlines()
 
 directions = []
