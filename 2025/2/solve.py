@@ -43,23 +43,54 @@ for first, last, attribute in tuples:
 print(accumulator)
 
 # Part 2
-accumulator = 0
-for first, last, attribute in tuples:
-    comparer = last[:(attribute)]
-    comparee = first[:(attribute)]
-    # if comparer == comparee:
-    for i in range(1, attribute+1):
-        mini = comparer[:i]
-        multiples = int(attribute/i)
-    if int(first)<=int(mini*multiples)<=int(last):
-        accumulator += int(comparer + comparer)
-    while comparer != comparee:
-        compint = int(comparer) - 1 
-        comparer = str(compint)
-        for i in range(1, attribute+1):
-            mini = comparer[:i]
-            multiples = int(attribute/i)
-        if int(first)<=int(mini*multiples)<=int(last):
-            accumulator += int(comparer + comparer)
 
+# WRONG START OVER
+# accumulator = 0
+# for first, last, attribute in tuples:
+#     comparer = last[:(attribute)]
+#     comparee = first[:(attribute)]
+#     # if comparer == comparee:
+#     for i in range(1, attribute+1):
+#         mini = comparer[:i]
+#         multiples = int(attribute/i)
+#     if int(first)<=int(mini*multiples)<=int(last):
+#         accumulator += int(comparer + comparer)
+#     while comparer != comparee:
+#         compint = int(comparer) - 1 
+#         comparer = str(compint)
+#         for i in range(1, attribute+1):
+#             mini = comparer[:i]
+#             multiples = int(attribute/i)
+#         if int(first)<=int(mini*multiples)<=int(last):
+#             accumulator += int(comparer + comparer)
+tuples = []
+for item in ranges:
+    odd = False
+    first, last = item.split("-")
+    tuples.append((first, last))
+
+from functools import cache
+
+
+# Either count them, or calculate them
+import math
+# count
+accumulator = 0
+for first, last in tuples:
+    lower = int(first)
+    upper = int(last)
+    walker = int(first)
+    limit = int(last)
+    @cache
+    def check(candidate):
+        return lower <= candidate <= upper
+    while walker <= limit:
+        digits = len(str(walker))
+        for i in range(1, math.floor(digits/2) + 1):
+            if digits % i == 0:
+                ratio = int(digits/i)
+                candidate = int(str(walker)[:i]*ratio)
+                if check(candidate):
+                    accumulator += candidate
+        walker +=1
 print(accumulator)
