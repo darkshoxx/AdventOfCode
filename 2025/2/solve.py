@@ -43,3 +43,23 @@ for first, last, attribute in tuples:
 print(accumulator)
 
 # Part 2
+accumulator = 0
+for first, last, attribute in tuples:
+    comparer = last[:(attribute)]
+    comparee = first[:(attribute)]
+    # if comparer == comparee:
+    for i in range(1, attribute+1):
+        mini = comparer[:i]
+        multiples = int(attribute/i)
+    if int(first)<=int(mini*multiples)<=int(last):
+        accumulator += int(comparer + comparer)
+    while comparer != comparee:
+        compint = int(comparer) - 1 
+        comparer = str(compint)
+        for i in range(1, attribute+1):
+            mini = comparer[:i]
+            multiples = int(attribute/i)
+        if int(first)<=int(mini*multiples)<=int(last):
+            accumulator += int(comparer + comparer)
+
+print(accumulator)
