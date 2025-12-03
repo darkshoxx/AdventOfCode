@@ -23,11 +23,27 @@ for line in content:
 print(accumulator)
 
 # Part 2
+
+def go_deeper(digits_available, string, pointer):
+    difference = len(string) - digits_available
+    best = "0"
+    best_index = - 1
+    for index in range(pointer+1, difference+1):
+        if string[index] > best:
+            best_index = index
+            best = string[index]
+            if best == "9":
+                break
+    pointer = best_index
+    if digits_available == 1:
+        return best
+    result_string = go_deeper(digits_available-1, string, pointer)
+    return best + result_string
+
 accumulator = 0
 for line in content:
-    digits = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-    length = len(line)
-    difference = length - 12
-    for index in range(difference):
-        pass
+    result = go_deeper(digits_available=12, string=line[:-1], pointer=-1)
+    print(int(result))
+    accumulator += int(result)
+print(accumulator)
 
